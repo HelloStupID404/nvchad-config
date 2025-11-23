@@ -16,13 +16,29 @@ return {
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
+  			"vim", "lua", "vimdoc",
+       "html", "css", "javascript", "c", "java", "python",
+  		},
+  	},
+  },
+
+  {
+    "RRethy/vim-illuminate",
+    event = "BufReadPost",
+    config = function()
+      require("illuminate").configure({
+        delay = 100,
+        filetypes_denylist = {
+          "NvimTree",
+          "packer",
+          "dashboard",
+          "help",
+        },
+      })
+    end,
+  },
 }
