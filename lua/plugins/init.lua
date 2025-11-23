@@ -19,11 +19,11 @@ return {
   {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css", "javascript", "c", "java", "python",
-  		},
-  	},
+      ensure_installed = { "vim", "lua", "markdown", "c", "cpp", "c_sharp",
+        "java", "python", "html", "css", "typescript", "javascript",
+        "json", "xml", "go", "rust", "ruby", "bash", "sql"
+      },
+    },
   },
 
   {
