@@ -1,1 +1,1 @@
-** My Nvchad config for neovim first try on Windows **
+- **My Nvchad config for neovim first try on Windows**
